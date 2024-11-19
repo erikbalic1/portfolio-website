@@ -23,8 +23,8 @@ const toggleButton2 = document.getElementById('toggleButton');
 });
 
 toggleButton2.addEventListener('click', () => {
-    myList.classList.toggle('<i class="fas fa-bars"></i>');
-    toggleButton2.textContent = myList.classList.contains('<i class="fas fa-bars"></i>') 
-    ? '<i class="fas fa-bars"></i>' 
-    : '<i class="fa-solid fa-x"></i>';
+    myList.classList.toggle('show');
+    toggleButton2.textContent = myList.classList.contains('show') 
+    ? 'Show' 
+    : 'Hide';
 });
