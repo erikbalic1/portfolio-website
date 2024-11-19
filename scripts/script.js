@@ -25,6 +25,6 @@ const toggleButton2 = document.getElementById('toggleButton');
 toggleButton2.addEventListener('click', () => {
     myList.classList.toggle('show');
     toggleButton2.textContent = myList.classList.contains('show') 
-    ? 'Show' 
-    : 'Hide';
+    ? 'Hide' 
+    : 'Show';
 });
