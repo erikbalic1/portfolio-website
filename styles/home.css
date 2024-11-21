@@ -248,6 +248,6 @@ span.bigLetter {
     }
 
     .letter {
-        letter-spacing: 0.25em;
+        letter-spacing: 0;
     }
 }
