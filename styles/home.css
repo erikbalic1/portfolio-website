@@ -147,14 +147,20 @@ span.name2 {
     font-family: "Rubik", sans-serif;
 }
 
-#myList a:hover, a.selected {
+#myList a:hover {
     transition: color 0.5s ease-in-out;
     font-weight: 500;
     color: #4A628A;
 }
 
+#myList a.selected {
+    color: #4A628A;
+    font-weight: 500;
+}
+
 #myList.show {
     max-height: 500px;
+    animation: fadeIn 0.6s ease forwards;
 }
 
 
