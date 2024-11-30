@@ -60,13 +60,15 @@
 }
 
 
-img {
+img.pc-photo {
     height: 70vh;
     border-radius: 15px;
 }
 
 img.mobile-photo {
-    visibility: hidden;
+    display: none;
+    height: 70vh;
+    border-radius: 15px;
 }
 
 @media (max-width: 768px) {
@@ -75,16 +77,12 @@ img.mobile-photo {
         width: 100%;
     }
 
-    .photo img {
-        height: 50vh;
-    }
-
     img.mobile-photo {
-        visibility: visible;
+        display: block;
     }
 
     img.pc-photo {
-        visibility: hidden;
+        display: none;
     }
 
     .skills {
