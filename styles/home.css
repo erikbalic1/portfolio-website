@@ -349,7 +349,7 @@ span.smallLetter {
 
     .footer {
         position: static;
-        right: 0;
-        left: 0;
+        border-radius: 15px;
+        box-shadow: 4px 4px 4px gray;
     }
 }
