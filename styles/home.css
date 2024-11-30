@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
+
 body {
     height: 100vh;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 body.light-theme {
@@ -28,9 +31,42 @@ header {
     border-radius: 15px;
     cursor: pointer;
     box-shadow: 4px 4px 4px gray;
-    position: sticky;   
+    position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.footer {
+    background-color: #c7c7c7; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex;
+    cursor: pointer;
+    margin: 0;
+    padding: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: "Reddit Sans", sans-serif;
+    max-height: 100px;
+    position: fixed;
+}
+
+.icons > a {
+    font-size: 2.5em;
+    color: #7AB2D3;
+}
+
+.icons > a:hover {
+    color: #4A628A;
+    transition: color 0.5s ease-in-out;
+}
+
+#copyright {
+    font-size: 0.75em;
+    vertical-align: top;
 }
 
 .links {
@@ -66,6 +102,10 @@ header {
 
 span.name {
     color: #7AB2D3;
+}
+
+span.name2 {
+    color: #4A628A;
 }
 
 #theme-toggle {
@@ -171,6 +211,7 @@ span.name {
 
 p {
     font-size: 1.5em;
+    cursor: pointer;        
 }
 
 span.location {
@@ -194,6 +235,17 @@ a.city:hover {
     color: white;
 }
 
+a.contact {
+    font-family: "Rubik", sans-serif;
+    color: #7AB2D3;
+    text-decoration: none;
+}
+
+a.contact:hover {
+    color: #4A628A;
+    transition: color 0.5s ease-in-out;
+}
+
 .motivational {
     display: flex;
     flex-direction: column;
@@ -207,17 +259,14 @@ a.city:hover {
     font-family: "Archivo Black", sans-serif;
     font-size: 1.5em;
     max-width: 50%;
-    filter: blur(5px);
-}
-
-.motivational:hover {
-    filter: none;
-    transition: 0.5s ease-in-out;
 }
 
 .letter {
     letter-spacing: 1em;
-}
+    position: relative;
+    display: flex;
+    align-items: center;
+}   
 
 span.bigLetter {
     font-size: 3rem;
@@ -226,7 +275,50 @@ span.bigLetter {
     color:#4A628A;
     border-left: thick solid #334463;
     padding-left: 0.5em;
+    left: 0;
+    cursor: pointer;
 }
+
+span.smallLetter {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.letter:hover .smallLetter {
+    animation: fadeIn 0.6s ease forwards;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.letter:hover {
+    animation: fadeIn 1s ease forwards;
+    background-color: #c7c7c7;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.smallLetter:nth-child(1) { animation-delay: 0s; }
+.smallLetter:nth-child(2) { animation-delay: 0.2s; }
+.smallLetter:nth-child(3) { animation-delay: 0.4s; }
+.smallLetter:nth-child(4) { animation-delay: 0.6s; }
+.smallLetter:nth-child(5) { animation-delay: 0.8s; }
+.smallLetter:nth-child(6) { animation-delay: 1s; }
+
+
 
 @media (max-width: 768px) {
     .navbar-pc {
@@ -244,10 +336,20 @@ span.bigLetter {
     .motivational {
         width: 100%;
         max-width: 100%;
-        filter: none;
     }
 
     .letter {
         letter-spacing: 0;
+    }
+
+    span.smallLetter {
+        opacity: 1;
+        margin-left: 0.5em;
+    }
+
+    .footer {
+        position: static;
+        right: 0;
+        left: 0;
     }
 }
