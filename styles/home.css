@@ -6,8 +6,8 @@
 body {
     height: 100vh;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 body.light-theme {
@@ -27,6 +27,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 1em;
+    margin: 1em;
     max-height: 50px;
     border-radius: 15px;
     cursor: pointer;
@@ -38,25 +39,18 @@ header {
 
 .footer {
     background-color: #c7c7c7; 
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    align-items: center;
-    justify-content: flex;
     cursor: pointer;
-    margin: 0;
-    padding: 1em;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    padding: 20px;
     font-family: "Reddit Sans", sans-serif;
-    max-height: 100px;
-    position: fixed;
+    height: fit-content;
+    font-size: 0.85rem;
 }
 
 .icons > a {
     font-size: 2.5em;
     color: #7AB2D3;
+    letter-spacing: 0.5em;
 }
 
 .icons > a:hover {
@@ -189,9 +183,9 @@ span.name2 {
 
 .container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin: 1em;
+    padding: 1em;
 }
 
 .description {
@@ -347,9 +341,4 @@ span.smallLetter {
         margin-left: 0.5em;
     }
 
-    .footer {
-        position: static;
-        border-radius: 15px;
-        box-shadow: 4px 4px 4px gray;
-    }
 }

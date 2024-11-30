@@ -1,1 +1,86 @@
 @import "home.css";
+
+.container {
+    justify-content: center;
+    gap: 3em;
+}
+
+.aboutme {
+    align-items: center;
+    display: block;
+    font-family: "Reddit Sans", sans-serif;
+    font-weight: 500;
+    background-color: #c7c7c7;
+    border: none;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 4px 4px 4px gray;
+    max-width: 50%;
+}
+
+.skills {
+    align-items: center;
+    display: block;
+    font-family: "Reddit Sans", sans-serif;
+    font-weight: 500;
+    background-color: #c7c7c7;
+    border: none;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 4px 4px 4px gray;
+    max-width: 50%;
+}
+
+.skills > h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.skills > p > a {
+    text-decoration: none;
+    color: #7AB2D3;
+    font-weight: bold;
+}
+
+.skills > p > a:hover {
+    color: #4A628A;
+    transition: color 0.5s ease-in-out;
+}
+
+.aboutme > h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.aboutme > p {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.photo {
+    max-width: 50%;
+}
+
+img {
+    height: 500px;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .aboutme {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .photo {
+        max-width: 100%;
+    }
+
+    .skills {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
