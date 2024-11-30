@@ -59,12 +59,9 @@
     font-weight: 500;
 }
 
-.photo {
-    max-width: 50%;
-}
 
 img {
-    height: 500px;
+    height: 70vh;
     border-radius: 15px;
 }
 
@@ -74,8 +71,8 @@ img {
         width: 100%;
     }
 
-    .photo {
-        max-width: 100%;
+    .photo img {
+        height: 50vh;
     }
 
     .skills {
