@@ -45,6 +45,7 @@ header {
     font-family: "Reddit Sans", sans-serif;
     height: fit-content;
     font-size: 0.85rem;
+    bottom: 0;
 }
 
 .icons > a {
