@@ -3,92 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erik Balic | Home Page </title>
-    <link rel="icon" type="image/x-icon" href="../files/logo.jpeg">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="icon" href="/images/websitelogo.svg">
+    <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>Erik Balic</title>
 </head>
 <body>
-    <header>
-        <label class="name">
-            <h1><span class="name">Erik</span> Balic</h1>
-        </label>
-        <nav class="navbar-pc">
-            <ul class="links">
-                <li class="home"><a class="selected" href="../pages/index.html">Home</a></li>
-                <li class="about"><a href="../pages/about.html">About</a></li>
-                <li class="projects"><a href="../pages/projects.html">Projects</a></li>
-                <li class="contact"><a  href="../pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <button id="theme-toggle"><i class="fas fa-sun"></i> Light</button>
-            <button id="toggleButton"><i class="fas fa-bars"></i></button>
+    <nav class="navbar">
+        <div class="navbar-name"><span class="name">Erik</span> Balic</div>
+        <div class="navbar-links">
+            <div id="homeNav" data-en class="navActive" onclick="handleNavClick(event)">Home</div>
+            <div id="aboutNav" data-en onclick="handleNavClick(event)">About</div>
+            <div id="projectsNav" data-en onclick="handleNavClick(event)">Projects</div>
+            <div id="contactNav" data-en onclick="handleNavClick(event)">Contact</div>
+            <div id="homeNav" data-hu class="navActive" onclick="handleNavClick(event)">Kezdőlap</div>
+            <div id="aboutNav" data-hu onclick="handleNavClick(event)">Rólam</div>
+            <div id="projectsNav" data-hu onclick="handleNavClick(event)">Projektek</div>
+            <div id="contactNav" data-hu onclick="handleNavClick(event)">Elérhetőség</div>
         </div>
-    </header>
-    <ul id="myList">
-        <li class="home"><a class="selected" href="../pages/index.html">Home</a></li>
-        <li class="about"><a href="../pages/about.html">About</a></li>
-        <li class="projects"><a href="../pages/projects.html">Projects</a></li>
-        <li class="contact"><a href="../pages/contact.html">Contact</a></li>
-    </ul>
-    <div class="container">
-        <div class="description">
-            <h1><i class="fa-solid fa-user"></i> Hi, my name is <span class="name">Erik</span>.</h1>
-            <h2>
-                Self-learning Front-End Developer from: <br />
-            </h2>
-            <h2>
-                <i class="fa-solid fa-hand-point-right fa-bounce"></i>
-                <span class="location">
-                    <i class="fa-solid fa-location-dot" id="locationMark"></i> 
-                    <a class="city" href="https://www.debrecen.hu/hu" target="_blank"> Debrecen, Hungary.</a>   
-                </span>
-            </h2>
-            <p>
-                This website is only a portfolio. On this webpage I store all my projects and all informations about me. 
-                I am open to do collaborations. Just click on the <a class="contact" href="../pages/contact.html">Contact</a> button.
-            </p>
+        <div class="navbar-actions">
+            <div class="languageChange">
+                <div class="enLabel" onclick="handleEnClick()">EN</div>
+                <div class="huLabel" onclick="handleHuClick()">HU</div>
+            </div>
+            <div id="theme-toggle" class="theme-toggle"><i class="fa fa-moon"></i></div>
         </div>
-        <div class="motivational">
-            <div class="letter">
-                <span class="bigLetter">C</span>
-                <span class="smallLetter">ONSISTENT</span>
+    </nav>
+    <div id="main" class="main">
+        <div class="welcome">
+            <div class="description">
+                <h1 data-en>Hey, my name is <span>Erik</span>.</h1>
+                <h2 data-en>Self-taught front-end developer <i class="fa-solid fa-laptop-code"></i></h2>
+                <p data-en class="paragraph">The goal of this website is to showcase my projects and help you learn more about me. If I've caught your attention, please feel free to contact me anytime. I'm open to do collaborations of any kind that align with my interests. My story just starts here. I am willing to fullfill my dream of becoming full-stack developer. Currently learning the basisc of back-end developing. And I am open to learn any new programming language or algorithms. We can colaborate at any time! Thank you for checking out my website!</p>
+                <h3 data-en>Current Status: <span>Studying at DE-IK</span> <i class="fa-solid fa-spinner fa-spin-pulse"></i></h3>
+                <h1 data-hu style="display: none;">Üdv, az én nevem <span>Erik</span>.</h1>
+                <h2 data-hu style="display: none;">Öntanuló front-end fejlesztő <i class="fa-solid fa-laptop-code"></i></h2>
+                <p data-hu style="display: none;" class="paragraph">A cél ezzel a weboldallal az, hogy egy helyet biztosítsak a projekteimnek illettve bemutat engem és az életemet. Ha felkeltettem a figyelmét akkor vegyük fel a kapcsolatot és hozzunk ki minnél többet ebből az üzleti kapcsolatból. Nyitott vagyok a közös munkákra. Az én történetem csak itt kezdődik. Elkötelezett vagyok hogy beteljesítsem az álmomat hogy full-stack fejlesztő legyek. Nyitott vagyok arra is hogy elsajátítsak progamozási nyelveket is illettve algoritmusoakt. Köszönöm hogy ránéztél a weboldalamra!</p>
+                <h3 data-hu style="display: none;">Jelenlegi Státusz: <span>Hallgató a DE-IK egyetemén</span> <i class="fa-solid fa-spinner fa-spin-pulse"></i></h3>
             </div>
-            <div class="letter">
-                <span class="bigLetter">R</span>
-                <span class="smallLetter">IGHTEOUS</span>
-            </div>
-            <div class="letter">
-                <span class="bigLetter">E</span>
-                <span class="smallLetter">NCOURAGED</span>
-            </div>
-            <div class="letter">
-                <span class="bigLetter">A</span>
-                <span class="smallLetter">CCURATE</span>
-            </div>
-            <div class="letter">
-                <span class="bigLetter">T</span>
-                <span class="smallLetter">RUSTFULL</span>
-            </div>
-            <div class="letter">
-                <span class="bigLetter">E</span>
-                <span class="smallLetter">XPERIENCED</span>
+            <div class="image">
+                <img src="/images/portfolio-photo.jpg" alt="Image of myself">
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="icons">
-            <a target="_blank" href="https://instagram.com/erikbalic1"><i class="fa-brands fa-square-instagram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/erikbalic1"><i class="fa-brands fa-square-facebook"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/erikbalic1"><i class="fa-brands fa-linkedin"></i></a>
-            <a target="_blank" href="https://www.github.com/erikbalic1"><i class="fa-brands fa-square-github"></i></a> 
-        </div>
-        <div class="text">
-            <p>Copyrighted &copy 2024. All rights reserved.</p>
-            <p>Website developed by <span class="name">Erik <span class="name2">Balic</span></span></p>
-        </div>
-    </footer>
-    <script src="../scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
