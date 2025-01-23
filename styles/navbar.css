@@ -82,3 +82,84 @@
     transition: color 0.5s ease-in-out;
     color: #2d77d4;
 }
+
+.navbarIcon {
+    display: none;
+}
+
+.navbarCloseIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-mobile {
+    position: hidden;
+    display: none;
+}
+
+.navbarMobileLinks {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+    z-index: 5;
+}
+
+.navbarMobileLinks div {
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbarMobileLinks div.languageChange {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbarMobileLinks div:hover {
+    background-color: #555;
+}
+
+.navbarMobileLinks .languageChange:hover {
+    background: none;
+}
+
+.navbarMobileLinks.active {
+    right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+    
+    .navbar-actions {
+        display: none;
+    }
+
+    .navbarIcon {
+        display: flex;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    .navbar-mobile {
+        display: flex;
+    }
+}

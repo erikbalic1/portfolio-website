@@ -58,3 +58,34 @@ img {
     overflow-clip-margin: content-box;
     overflow: clip;
 }
+
+@media screen and (max-width: 800px) {
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .description {
+        max-width: 100%;
+    }
+
+    .image img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .paragraph {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}

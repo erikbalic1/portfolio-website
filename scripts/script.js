@@ -51,3 +51,29 @@ toggleButton.addEventListener('click', () => {
         ? '<i class="fas fa-moon"></i>'
         : '<i class="fa-solid fa-lightbulb"></i>';
 });
+
+const toggleButtonMobile = document.getElementById('theme-toggle-mobile');
+const bodyMobile = document.body;
+
+toggleButtonMobile.addEventListener('click', () => {
+    bodyMobile.classList.toggle('dark-theme');
+    bodyMobile.classList.toggle('light-theme');
+
+    const isDarkTheme = bodyMobile.classList.contains('dark-theme');
+    toggleButtonMobile.innerHTML = isDarkTheme
+        ? '<i class="fas fa-moon"></i> Dark'
+        : '<i class="fa-solid fa-lightbulb"></i> Light';
+});
+
+
+const menuIcon = document.getElementById('navbarIcon');
+const closeIcon = document.getElementById('navbarCloseIcon');
+const menu = document.getElementById('navbarMobileLinks');
+
+menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+closeIcon.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
