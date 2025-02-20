@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Open Sans", serif;
+    gap: 2em;
+}
+
+.description {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    border-bottom: medium solid;
+    border-top: medium solid;
+    box-shadow: 0 0 10px, 
+              0 0 20px,
+              0 0 30px;
+}
+
+.description > div {
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    max-width: 33%;
+}
+
+.description > div:hover {
+    box-shadow: 0 0 10px, 
+              0 0 20px,
+              0 0 30px;
+    transition: ease-in-out 0.3s;
+    transform: translateY(-10px);
+}
+
+.div1 {
+    line-height: 2em;
+}
+
+.div1 > h1 {
+    font-size: 3em;
+    line-height: normal;
+}
+
+.div1 > h2 {
+    font-size: 2em;
+}
+
+.div1 > p {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.div3 > p {
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+span.name1 {
+    background-image: linear-gradient(to right, #29a325, #2d77d4);
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+span.name_icon {
+    padding: 0.2em; 
+}
+
+.div2 > img {
+    width: 500px;
+    height: 520px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1450px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .description > div {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .div2 > img {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .description > div {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .div2 > img {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .description > div {
+        max-width: 100%;
+        justify-content: center;
+    }
+    .div2 > img {
+        height: 470px;
+        width: 450px;
+    }
+}
