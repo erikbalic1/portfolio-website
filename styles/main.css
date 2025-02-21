@@ -9,11 +9,6 @@
     padding: 1em;
     display: flex;
     flex-direction: row;
-    border-bottom: medium solid;
-    border-top: medium solid;
-    box-shadow: 0 0 10px, 
-              0 0 20px,
-              0 0 30px;
 }
 
 .description > div {
