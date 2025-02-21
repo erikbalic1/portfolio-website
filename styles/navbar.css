@@ -86,6 +86,7 @@
 
 .navbarIcon {
     display: none;
+    float: right;
 }
 
 .navbarCloseIcon {
