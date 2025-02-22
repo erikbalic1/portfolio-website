@@ -122,3 +122,21 @@ span.name_icon {
         width: 450px;
     }
 }
+
+@media only screen and (max-width: 550px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .description > div {
+        justify-content: center;
+    }
+    .div2 > img {
+        height: 470px;
+        width: 450px;
+    }
+}
+
