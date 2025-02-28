@@ -1,27 +1,20 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Open Sans", serif;
-    gap: 2em;
-}
-
-.description {
+.home-page {
     padding: 1em;
     display: flex;
     flex-direction: row;
 }
 
-.description > div {
+.home-page > div {
     border-radius: 10px;
     margin: 1em;
     padding: 1em;
     max-width: 33%;
 }
 
-.description > div:hover {
+.home-page > div:hover {
     box-shadow: 0 0 10px, 
-              0 0 20px,
-              0 0 30px;
+                0 0 20px,
+                0 0 30px;
     transition: ease-in-out 0.3s;
     transform: translateY(-10px);
 }
@@ -42,11 +35,12 @@
 .div1 > p {
     font-size: 1em;
     font-weight: 600;
+    line-height: 1.5em;
 }
 
 .div3 > p {
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.5em;
 }
 
@@ -63,81 +57,248 @@ span.name_icon {
 }
 
 .div2 > img {
-    width: 500px;
-    height: 520px;
+    width: 100%;
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 1450px) {
-    .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+.separator-line {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.before-line {
+    flex-grow: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #29a325, transparent);
+}
+
+.after-line {
+    flex-grow: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #2d77d4, transparent);
+}
+
+.line-title {
+    position: relative;
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", serif;
+    padding: 1em;
+    background-image: linear-gradient(to right, #29a325, #2d77d4);
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+.about-me > div {
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    max-width: 33%;
+}
+
+.about-me > .informations, .about-me > .socials, .about-me > .skills {
+    box-shadow: 0 0 10px, 
+                0 0 20px,
+                0 0 30px;
+}
+
+.informations > h1, .socials > h1, .skills > h1 {
+    color: #2d77d4
+}
+
+.meet-me {
+    font-size: 3em;
+    width: 20%;
+}
+
+.social-links, .information-links, .skill-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.social-links > div, .information-links > div, .skill-links > div {
+    border: medium solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.social-links > div:hover, .information-links > div:hover, .skill-links > div:hover {
+    box-shadow: 0 0 10px, 
+                0 0 20px,
+                0 0 30px;
+    transition: ease-in-out 0.3s;
+    transform: translateY(-10px);
+}
+
+.github > i, 
+.instagram > i, 
+.facebook > i ,
+.linkedin > i, 
+.discord > i, 
+.information-name > i, 
+.information-mail > i, 
+.information-location > i, 
+.information-study > i, 
+.information-birthday > i,
+.skill-html-css > i,
+.skill-html5 > i,
+.skill-javascript > i,
+.skill-java > i,
+.skill-python > i {
+    font-size: 2em;
+    border-right: medium solid;
+    padding: 0.5em;
+}
+
+.github > h2, 
+.instagram > h2, 
+.facebook > h2 , 
+.linkedin > h2, 
+.discord > h2, 
+.information-name > h2, 
+.information-mail > h2, 
+.information-location > h2, 
+.information-study > h2,
+.information-birthday > h2,
+.skill-html-css > h2,
+.skill-html5 > h2,
+.skill-javascript > h2,
+.skill-java > h2,
+.skill-python > h2 {
+    margin: 1em;    
+}
+
+
+
+/*---RESPONSIVE DESIGN: ---*/
+
+@media screen and (max-width: 1279px) {
     
-    .description > div {
-        max-width: 100%;
-        justify-content: center;
+    .line-title {
+        font-size: 3em;
     }
 
-    .div2 > img {
-        width: auto;
-        height: auto;
+    .meet-me {
+        width: 100%;
+    }
+
+    .home-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .home-page > div {
+        max-width: 100%;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-me > div {
+        max-width: 100%;
+    }
+    
+}  
+
+@media screen and (max-width: 768px) {
+    
+    .line-title {
+        font-size: 2.5em;
+    }
+
+    .meet-me {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    .home-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .home-page > div {
+        max-width: 100%;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-me > div {
+        max-width: 100%;
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 480px) {
     
-    .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .description > div {
-        max-width: 100%;
-        justify-content: center;
+    .line-title {
+        font-size: 2em;
     }
 
-    .div2 > img {
-        width: auto;
-        height: auto;
+    .meet-me {
+        text-align: center;
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .home-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .home-page > div {
+        max-width: 100%;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about-me > .informations, .about-me > .socials, .about-me > .skills {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .informations > div, .socials > div, .skills > div {
+        margin: 0.5em;
+    }
+
+    
+    .informations-name > h2, .socials > h2 {
+        text-align: center;
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    
-    .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .description > div {
-        max-width: 100%;
-        justify-content: center;
-    }
-    .div2 > img {
-        height: 470px;
-        width: 450px;
-    }
-}
 
-@media only screen and (max-width: 550px) {
-    .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 100%;
-        padding: 0.5em;
-    }
-    
-    .description > div {
-        justify-content: center;
-    }
-    .div2 > img {
-        height: 420px;
-        width: 400px;
-    }
-}
 

@@ -29,7 +29,7 @@
                         <div class="enLabel" onclick="handleEnClick()">EN</div>
                         <div class="huLabel" onclick="handleHuClick()">HU</div>
                     </div>
-                    <div id="theme-toggle" class="theme-toggle"><i class="fa fa-moon"></i></div>
+                    <div id="theme-toggle" class="theme-toggle"><i class="fa fa-lightbulb"></i></div>
                 </div>
                 <div class="navbar-mobile">
                     <div id="navbarIcon" class="navbarIcon"><i class="fa-solid fa-bars"></i></div>
@@ -47,13 +47,19 @@
                             <div class="enLabel" onclick="handleEnClick()">EN</div>
                             <div class="huLabel" onclick="handleHuClick()">HU</div>
                         </div>
-                        <div id="theme-toggle-mobile" class="theme-toggle-mobile"><i class="fa fa-moon"></i> Dark</div>
+                        <div id="theme-toggle-mobile" class="theme-toggle-mobile"><i class="fa fa-lightbulb"></i> Light</div>
                     </div>
                 </div>
             </div>
         </header>
         <div class="container">
-            <div class="description">
+            <div class="separator-line">
+                <div class="before-line"></div>
+                <div data-en class="line-title">Home Page</div>
+                <div data-hu class="line-title">Kezdőlap</div>
+                <div class="after-line"></div>
+            </div>
+            <div class="home-page">
                 <div class="div1">
                     <h1 data-en><i class="fa-solid fa-user"></i> Hi, my name is <span class="name1">Erik.</span></h1>
                     <h2 data-en><i class="fa-solid fa-code"></i> Self-taught front-end developer.</h2>
@@ -83,21 +89,113 @@
                 </div>
                 <div class="div3">
                     <h1 data-en><i class="fa-solid fa-circle-info"></i> Quick tips about programming </h1>
-                    <h2 data-en><i class="fa-solid fa-square-check"></i> Before starting your learning about programming make sure all of this is checked: </h2>
+                    <h2 data-en>Before starting your learning about programming make sure all of this is checked: </h2>
                     <p data-en>1. First analyize the problem and try to think of a solution then solve it! <br>
                         2. Keep the code as clean as possible to make it readable for anyone. <br>
                         3. Save as memory space as possible, try the best methods to have less code. <br>
                         4. Find the programming language or the IDE that fits you the best in work. <br>
                         5. Make as much reusable code fragments as you can. It makes the work easier.
                     </p>
+                    <h2 data-en>Hope I helped you with these tipps! <i class="fa-regular fa-face-laugh-beam"></i></h2>
                     <h1 data-hu><i class="fa-solid fa-circle-info"></i> Hasznos tippek a programozásról </h1>
-                    <h2 data-hu><i class="fa-solid fa-square-check"></i> Mielőtt nekikezdenél a programozás megtanulásához vedd figyelembe ezeket a tippeket: </h2>
+                    <h2 data-hu>Mielőtt nekikezdenél a programozás megtanulásához vedd figyelembe ezeket a tippeket: </h2>
                     <p data-hu>1. Első sorba ismerd fel a problémát majd gondolj ki egy megoldást és csak utána vágj bele a kódolásba. <br>
-                        2. Igyekezz minnél tisztább és rendezettebb kódot írni hogy olvasható legyen mindenki számára. <br>
+                        2. Igyekezz minél tisztább és rendezettebb kódot írni hogy olvasható legyen mindenki számára. <br>
                         3. Spórolj minél több memóriát azzal hogy olyan módszereket használsz amihez kevesebb kód kell. <br>
                         4. Találd meg a neked megfelelő programozási nyelvet és fejlesztői környezetet. <br>
-                        5. Készíts minnél több olyan kódot amit újra felhasználható lesz.
+                        5. Készíts minél több olyan kódot amit újra felhasználható lesz.
                     </p>
+                    <h2 data-hu>Remélem tudtam segíteni ezekkel a tippekkel! <i class="fa-regular fa-face-laugh-beam"></i></h2>
+                </div>
+            </div>
+            <div class="separator-line">
+                <div class="before-line"></div>
+                <div data-en class="line-title">About Me</div>
+                <div data-hu class="line-title">Rólam</div>
+                <div class="after-line"></div>
+            </div>
+            <div class="about-me">
+                <div class="meet-me">
+                    <h1 data-en>Meet <span class="name1">ME:</span></h1>
+                    <h1 data-hu>Ismerj meg <span class="name1">ENGEM:</span></h1>
+                </div>
+                <div class="informations">
+                    <h1 data-en>INFORMATIONS:</h1>
+                    <h1 data-hu>INFORMÁCIÓK:</h1>
+                    <div class="information-links">
+                        <div class="information-name">
+                            <i class="fa-solid fa-id-card"></i>
+                            <h2>Balic Erik-Gabor</h2>
+                        </div>
+                        <div class="information-birthday">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <h2 data>20 years old // 2004.09.29</h2>
+                        </div>
+                        <div class="information-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                            <h2>erikbalic1@gmail.com</h2>
+                        </div>
+                        <div class="information-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h2>Debrecen, Hungary</h2>
+                        </div>
+                        <div class="information-study">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h2>Computer Science, DE-IK</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="socials">
+                    <h1 data-en>MY SOCIALS: </h1>
+                    <h1 data-hu>ELÉRHETŐSÉGEK: </h1>
+                    <div class="social-links">
+                        <div class="github" style="cursor: pointer;" onClick="window.open('https://github.com/erikbalic1');">
+                            <i class="fa-brands fa-github"></i> 
+                            <h2>GitHub</h2>
+                        </div>
+                        <div class="instagram" style="cursor: pointer;" onClick="window.open('https://instagram.com/erikbalic1');">
+                            <i class="fa-brands fa-instagram"></i>
+                            <h2>Instagram</h2>
+                        </div>
+                        <div class="facebook" style="cursor: pointer;" onClick="window.open('https://facebook.com/erikbalic1');">
+                            <i class="fa-brands fa-facebook"></i>
+                            <h2>Facebook</h2>
+                        </div>
+                        <div class="linkedin" style="cursor: pointer;" onClick="window.open('https://www.linkedin.com/in/erikbalic1/');">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <h2>LinkedIn</h2>
+                        </div>
+                        <div class="discord" style="cursor: pointer;" onClick="window.open('https://discord.com/users/297777086708318210');">
+                            <i class="fa-brands fa-discord"></i>
+                            <h2>Discord</h2>
+                        </div>
+                    </div>
+                </div>  
+                <div class="skills">
+                    <h1 data-en>SKILLS: </h1>
+                    <h1 data-hu>TAPASZTALATOK: </h1>
+                    <div class="skill-links">
+                        <div class="skill-html-css" style="cursor: pointer;" onClick="window.open('https://www.credly.com/badges/bca63360-6ef5-45ff-90ca-6072746a223b/public_url');">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>HTML & CSS</h2>
+                        </div>
+                        <div class="skill-html5" style="cursor: pointer;" onClick="window.open('https://www.credly.com/badges/3af44ef6-790e-48fc-9498-0f2de18e654c/public_url')">
+                            <i class="fa-brands fa-html5"></i>
+                            <h2>HTML5 Application</h2>
+                        </div>
+                        <div class="skill-javascript" style="cursor: pointer;" onClick="window.open('https://www.credly.com/badges/a8b7f62a-ff7c-401e-8681-2bb8315190de/public_url');">
+                            <i class="fa-brands fa-js"></i>
+                            <h2>Javascript</h2>
+                        </div>
+                        <div class="skill-java" style="cursor: pointer;" onClick="window.open('https://www.credly.com/badges/5dafc25d-1d42-485c-8bc9-51a73174264a/public_url');">
+                            <i class="fa-brands fa-java"></i>
+                            <h2>Java</h2>
+                        </div>
+                        <div class="skill-python" style="cursor: pointer;" onClick="window.open('https://www.credly.com/badges/f77268ef-36b3-4b91-b8c2-70096503100a/public_url')">
+                            <i class="fa-brands fa-python"></i>
+                            <h2>Python</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

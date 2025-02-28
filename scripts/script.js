@@ -2,7 +2,7 @@ function handleEnClick() {
     document.querySelector(".languageChange .enLabel").classList.add("active");
     document.querySelector(".languageChange .huLabel").classList.remove("active");
     
-    // Hide all HU elements and show EN elements
+    
     document.querySelectorAll("[data-hu]").forEach((element) => {
         element.style.display = "none";
     });
@@ -15,7 +15,7 @@ function handleHuClick() {
     document.querySelector(".languageChange .enLabel").classList.remove("active");
     document.querySelector(".languageChange .huLabel").classList.add("active");
     
-    // Hide all EN elements and show HU elements
+    
     document.querySelectorAll("[data-en]").forEach((element) => {
         element.style.display = "none";
     });
@@ -25,7 +25,6 @@ function handleHuClick() {
 }
 
 function handleNavClick(event) {
-    // Add active class to clicked navigation item and remove from others
     const navItems = document.querySelectorAll(".navbar-links > div");
     navItems.forEach((item) => {
         item.classList.remove("navActive");
@@ -33,14 +32,15 @@ function handleNavClick(event) {
     event.target.classList.add("navActive");
 }
 
-// Set default language (optional)
+
 document.addEventListener("DOMContentLoaded", () => {
-    handleEnClick(); // Default to English
+    handleEnClick(); 
 });
 
 
 const toggleButton = document.getElementById('theme-toggle');
 const body = document.body;
+const lines = document.querySelectorAll('.line');
 
 toggleButton.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
@@ -77,3 +77,5 @@ menuIcon.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+
