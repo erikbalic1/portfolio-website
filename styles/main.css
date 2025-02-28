@@ -133,11 +133,8 @@ span.name_icon {
 .social-links > div, .information-links > div, .skill-links > div {
     border: medium solid;
     border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: inline-flex;
     align-items: center;
-    gap: 1em;
 }
 
 .social-links > div:hover, .information-links > div:hover, .skill-links > div:hover {
