@@ -146,6 +146,9 @@
     right: 0;
 }
 
+
+/*---RESPONSIVE DESIGN: ---*/
+
 @media screen and (max-width: 768px) {
     .navbar-links {
         display: none;
@@ -164,4 +167,6 @@
     .navbar-mobile {
         display: flex;
     }
+
+    
 }

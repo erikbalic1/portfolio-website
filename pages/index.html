@@ -15,14 +15,14 @@
             <div class="navbar">
                 <div class="navbar-name"><span class="name">Erik</span> Balic</div>
                 <div class="navbar-links">
-                    <div id="homeNav" data-en class="navActive" onclick="handleNavClick(event)">Home</div>
-                    <div id="aboutNav" data-en onclick="handleNavClick(event)">About</div>
-                    <div id="projectsNav" data-en onclick="handleNavClick(event)">Projects</div>
-                    <div id="contactNav" data-en onclick="handleNavClick(event)">Contact</div>
-                    <div id="homeNav" data-hu class="navActive" onclick="handleNavClick(event)">Kezdőlap</div>
-                    <div id="aboutNav" data-hu onclick="handleNavClick(event)">Rólam</div>
-                    <div id="projectsNav" data-hu onclick="handleNavClick(event)">Projektek</div>
-                    <div id="contactNav" data-hu onclick="handleNavClick(event)">Elérhetőség</div>
+                    <div class="nav-item" data-en data-target="home">Home</div>
+                    <div class="nav-item" data-en data-target="about-me">About</div>
+                    <div class="nav-item" data-en data-target="projects">Projects</div>
+                    <div class="nav-item" data-en data-target="contact-me">Contact</div>
+                    <div class="nav-item" data-hu data-target="home">Kezdőlap</div>
+                    <div class="nav-item" data-hu data-target="about-me">Rólam</div>
+                    <div class="nav-item" data-hu data-target="projects">Projektek</div>
+                    <div class="nav-item" data-hu data-target="contact-me">Elérhetőség</div>
                 </div>
                 <div class="navbar-actions">
                     <div class="languageChange">
@@ -35,14 +35,14 @@
                     <div id="navbarIcon" class="navbarIcon"><i class="fa-solid fa-bars"></i></div>
                     <div id="navbarMobileLinks" class="navbarMobileLinks">
                         <div id="navbarCloseIcon" class="navbarCloseIcon"><i class="fa-solid fa-x"></i></div>
-                        <div id="homeNav" data-en class="navActive" onclick="handleNavClick(event)">Home</div>
-                        <div id="aboutNav" data-en onclick="handleNavClick(event)">About</div>
-                        <div id="projectsNav" data-en onclick="handleNavClick(event)">Projects</div>
-                        <div id="contactNav" data-en onclick="handleNavClick(event)">Contact</div>
-                        <div id="homeNav" data-hu class="navActive" onclick="handleNavClick(event)">Kezdőlap</div>
-                        <div id="aboutNav" data-hu onclick="handleNavClick(event)">Rólam</div>
-                        <div id="projectsNav" data-hu onclick="handleNavClick(event)">Projektek</div>
-                        <div id="contactNav" data-hu onclick="handleNavClick(event)">Elérhetőség</div>
+                        <div class="nav-item" data-en data-target="home">Home</div>
+                        <div class="nav-item" data-en data-target="about-me">About</div>
+                        <div class="nav-item" data-en data-target="projects">Projects</div>
+                        <div class="nav-item" data-en data-target="contact-me">Contact</div>
+                        <div class="nav-item" data-hu data-target="home">Kezdőlap</div>
+                        <div class="nav-item" data-hu data-target="about-me">Rólam</div>
+                        <div class="nav-item" data-hu data-target="projects">Projektek</div>
+                        <div class="nav-item" data-hu data-target="contact-me">Elérhetőség</div>
                         <div class="languageChange">
                             <div class="enLabel" onclick="handleEnClick()">EN</div>
                             <div class="huLabel" onclick="handleHuClick()">HU</div>
@@ -59,7 +59,7 @@
                 <div data-hu class="line-title">Kezdőlap</div>
                 <div class="after-line"></div>
             </div>
-            <div class="home-page">
+            <div id="home-page" class="home-page">
                 <div class="div1">
                     <h1 data-en><i class="fa-solid fa-user"></i> Hi, my name is <span class="name1">Erik.</span></h1>
                     <h2 data-en><i class="fa-solid fa-code"></i> Self-taught front-end developer.</h2>
@@ -114,7 +114,7 @@
                 <div data-hu class="line-title">Rólam</div>
                 <div class="after-line"></div>
             </div>
-            <div class="about-me">
+            <div id="about-me" class="about-me">
                 <div class="meet-me">
                     <h1 data-en>Meet <span class="name1">ME:</span></h1>
                     <h1 data-hu>Ismerj meg <span class="name1">ENGEM:</span></h1>
@@ -172,7 +172,7 @@
                     </div>
                 </div>  
                 <div class="skills">
-                    <h1 data-en>SKILLS: </h1>
+                    <h1 data-en>MY SKILLS: </h1>
                     <h1 data-hu>TAPASZTALATOK: </h1>
                     <div class="skill-links">
                         <div class="skill-html-css" style="cursor: pointer;" onClick="window.open('https://www.credly.com/badges/bca63360-6ef5-45ff-90ca-6072746a223b/public_url');">
@@ -198,7 +198,44 @@
                     </div>
                 </div>
             </div>
+            <div class="separator-line">
+                <div class="before-line"></div>
+                <div data-en class="line-title">My Projects</div>
+                <div data-hu class="line-title">Projektek</div>
+                <div class="after-line"></div>
+            </div>
+            <div id="projects" class="projects">
+                <h1 data-en>COMING SOON!!</h1>
+                <h1 data-hu>HAMAROSAN!!</h1>
+            </div>
+            <div class="separator-line">
+                <div class="before-line"></div>
+                <div data-en class="line-title">Contact Me</div>
+                <div data-hu class="line-title">Elérhetőség</div>
+                <div class="after-line"></div>
+            </div>
+            <div id="contact-me" class="contact-me">
+                <form action="https://formsubmit.co/erikbalic1@gmail.com" method="POST">
+                    <h2 data-en>FULL NAME:</h2>
+                    <h2 data-hu>TELJES NÉV:</h2>
+                    <input data-en type="text" name="name" placeholder="Ex: John Smith" required>
+                    <input data-hu type="text" name="name" placeholder="Pl: Nagy János" required>
+                    <h2 data-en>YOUR E-MAIL:</h2>
+                    <h2 data-hu>E-MAIL CÍM:</h2>
+                    <input data-en type="email" name="email" placeholder="Ex: yourname@mail.com" required>
+                    <input data-hu type="email" name="email" placeholder="Pl: teljesnev@mail.com" required>
+                    <h2 data-en>DESCRIPTION:</h2>
+                    <h2 data-hu>RÖVID LEÍRÁS:</h2>
+                    <input data-en type="text" name="description" placeholder="Write some informations here">
+                    <input data-hu type="text" name="description" placeholder="Írj egy rövid leírást ide">
+                    <button data-en type="submit">SEND</button>
+                    <button data-hu type="submit">KÜLDÉS</button>
+                </form>
+            </div>
         </div>
+    </div>
+    <div id="back-to-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
     </div>
     <script src="/scripts/script.js"></script>
 </body>

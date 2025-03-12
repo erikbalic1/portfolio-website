@@ -24,14 +24,28 @@ function handleHuClick() {
     });
 }
 
-function handleNavClick(event) {
-    const navItems = document.querySelectorAll(".navbar-links > div");
-    navItems.forEach((item) => {
-        item.classList.remove("navActive");
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-target');
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-    event.target.classList.add("navActive");
-}
+});
 
+
+window.addEventListener("scroll", function () {
+    const scrollUp = document.getElementById("back-to-top");
+    if (window.pageYOffset > 500) {
+        backToTopDiv.style.display = "block"; 
+    } else {
+        backToTopDiv.style.display = "none"; 
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     handleEnClick(); 
