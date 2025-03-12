@@ -240,8 +240,8 @@ span.name_icon {
     border-radius: 15px;
     padding: 0.5em;
     font-size: 0.3;
-    background-color: rgba(0, 0, 0 , 0.1);
-    
+    background: rgba(1, 1, 1, 0.9);
+    color: white;
 }
 
 .contact-me > form > input:hover {
@@ -272,7 +272,6 @@ form > button {
     box-shadow: 0 0 10px, 
                 0 0 20px,
                 0 0 30px;
-    color: white;   
 }
 form > button:hover {
     cursor: pointer;
